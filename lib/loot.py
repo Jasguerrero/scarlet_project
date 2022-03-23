@@ -10,6 +10,8 @@ class Loot:
         for item in items:
             item_raw = self._clean_item_data(item)
             item_count, item_name = self._get_count_label(item_raw)
+            if not item_name:
+                raise ValueError
             item_counts[item_name] = item_count
 
         return item_counts
