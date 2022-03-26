@@ -43,7 +43,7 @@ class Session:
         for key, (lower_bound, upper_bound) in ranges.items():
             if lower_bound <= value <= upper_bound:
                 return key
-        raise ValueError
+        raise ValueError('No damage classification found')
 
     @staticmethod
     def _get_ranges() -> Dict[int, Tuple[float, float]]:
