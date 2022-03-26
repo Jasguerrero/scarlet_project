@@ -11,6 +11,11 @@ class Session:
         self.actual_damage = actual_damage
         self.damage_classification = damage_classification
 
+        self.session_data = {
+            'damage_classification': self.damage_classification,
+            'actual_damage': self.actual_damage
+        }
+
     def _get_damage_with_classification(self) -> Tuple[int, int]:
         """
         :return: First value is the actual damage and second the
